@@ -1,0 +1,201 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Coffee dales analysis - Excel Dashboard</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo"><strong>Data Analyst Portfolio</strong> <span>by Nikita Maslov</span></a>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+				<nav id="menu">
+					<ul class="links">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="#footer">Contact</a></li>
+						 <div class="dropup">
+							<button class="dropbtn">Portfolio Projects</button>
+							  <div class="dropup-content">
+									<a href="python.html">Python</a>
+									<a href="DataLens.html">DataLens</a>
+									<a href="sql.html">SQL</a>
+									<a href="excel.html">Excel</a>
+									<a href="https://public.tableau.com/app/profile/nikita.maslov" target="_blank" class="link">Tableau</a>
+									<a href="powerbi.html">Power BI</a>
+							</div>
+						 </div>	
+					</ul>						
+				</nav>
+
+
+				<!-- Main -->
+					<div id="main" class="alt">
+						
+
+						<!-- One -->
+							<section id="one">
+								<div class="inner">
+									<header class="major">
+										<h1>Project Details</h1>
+									</header>
+									<!--<span class="image main"><img src="images/pic11.jpg" alt="" /></span> -->
+									<h2>Цель</h2>
+									<p>Наша задача собрать интерактивный дашборд с интуитивно понятной фильтрацией по
+										основным критиериям. Дашборд должен отвечать на вопросы заказчика (см. в разделе Анализ).</p>
+
+									<p></p>
+										<p>Для этого мы проведем анализ и предобработку данных о заказах
+										(orders), покупателях (customers) и продуктах (products) из листов Excel для дальнейшей работы.</p>
+									<a href="https://github.com/NikitaMaslov93/PortfolioProjects/blob/main/Visualization/Excel/README.md" target="_blank"><u>Скачать с GitHub!</u></a>
+									<p></p>
+									<h2>Предобработка</h2>
+									<p> Исходные датасеты разнесены по листам (orders, customers, products). Для удобства работы
+									    мы объединим данные в один лист используя "ПРОСМОТРХ", комбинацию ИНДЕКС-ПОИСКПОЗ
+										и соответсвующие уникальные ключи. Для пары orders-customers ключ-Customer ID,
+										для orders-products ключ-Product ID.</p>
+									<img src="images/excel_project_1-1.PNG" alt="Excel Worksheet after Data Cleaning" style="width:1000px;height:750px;" data-position="center center" />
+									<p><i>Рисунок 1. Это изображение показывает исходный вид данных до объединения датасетов.</i></p>
+
+									<p>Перед началом работы была проведена подготовка данных для правильной интерпретации
+										информации и переносе ее на визуализацию. </p>
+									<p>А именно: </p>
+											<li>Изменил формат даты в столбце Order Date на более подходящий для региона. </li>
+											<li>Добавил столбец Sales, содержащий  полную стоимость заказа. </li>
+											<li>Изменил формат даты в столбце Order Date на более подходящий для региона. </li>
+											<li>Развернул Аббревиатуру типа кофе из столбца Coffee Type в столбец Coffee Type Name. </li>
+											<li>Добавил измерение (kg) в столбец Size.  </li>
+											<li>Убедился в отсутствии дубликатов в данных.  </li>
+											<p></p>
+									<img src="images/excel_project_1-2.PNG" alt="Excel Worksheet after Data Cleaning" style="width:1000px;height:850px;" data-position="center center" />
+									<p><i>Рисунок 2. Изображение показывает подготовленный датасет.</i></p>
+									<p>Выше проведенные шаги существенно упростят работу с данными и увеличат точность итоговых результатов. </p>
+									
+									<h2>Анализ</h2>
+									<p>Теперь имея подготовленные данные мы можем провести разведочный анализ для
+									получения инсайтов и закономерностей в исследуемых данных.</p>
+									<h4>Вопросы со стороны заказчика:</h4>
+									<ol>
+
+									<li>Сказывается ли наличие карты лояльности на стоимость покупки? </li>
+									<li>Какой объем товара предпочитаю покупатели? По странам есть различие? </li>
+									<li>Какую степень обжарки  покупают чаще? По странам есть различие? </li>
+									<li>Кагда наступает сезонный спад/подъем?</li>
+									<li>Есть ли взаимосвязь между типом кофе и сезонностью?  </li>
+									<li>Наблюдаются ли тенеденции к подъему/снижению по продажам? </li>
+									<li>В какие месяцы нарушается сезонность? почему? </li>
+									<li>На какие три месяца в году приходятся самые большие продажи? </li>
+									<li>Кто входит в Топ-5 покупателей товаров определенного типа? </li>
+
+									</ol>
+									<p>Отвечая на эти вопросы, бизнес в лице заказчика может улучшить понимание
+									его идеального покупателя и скорректировать маркетинговые стратегии для увеличения
+									прибыли компании.</p>
+									
+									<h2>Исследование данных</h2>
+									<p>Мы начнем сегментацию пользователей по типу и объему заказа, местоположению,
+									 наличию карты лояльности и так далее.</p>
+									<p>Я использовал объединенный датасет для создания сводных таблиц, основанных на
+									различных критериях. На основе этих сводных таблиц я создал диаграммы, временные шкалы
+									и срезы.</p>
+
+									<img src="images/excel_project_1-3.png" alt="Excel Analysis" style="width:1000px;height:700px;" data-position="center center" />
+									<p><i>Рисунок 3. Изображение показывает сводные таблицы, диаграммы и срезы.</i></p>
+
+									<p>Для удобного восприятия информации в целом, я создал дашборд, который отображает
+									все диаграммы и вспомогательные блоки, такие как временная шкала, срезы по типам
+										продукции и объему упаковки. Такой подход позволяет собирать нужные конфигурации
+									отображения данных.</p>
+
+									<img src="images/dashboard_excel.PNG" alt="Excel Sales Dashboard" style="width:1000px;height:500px;" data-position="center center" />
+									<p><i>Рисунок 4. Изображение показывает собранный дашборд.</i></p>
+
+									<h3>Ключевые результаты</h3>
+
+									<p>Используя дашборд, мы смогли получить следующую информацию:
+									</p>
+									<ul>
+										<li>Товар: В феврале 2022 года произошел обвал по продажам всех разновидностей кофе
+										кроме Арабики.</li>
+										<li>Товар: Обвал в феврале 2022 года никак не сказался на упаковке 0,2 кг
+										в отличии от остальных.</li>
+										<li>Сезонность: Из года в год сезонность подвержена внешним факторам.
+											Паттерн сезонности сквозь года ломается.</li>
+										<li>Местоположение: Покупатели из Великобритании в течение 2022 года не пользовались
+										картами лояльности. За другие периоды такого не наблюдалось. </li>
+										<li>Местоположение: Покупатели из Великобритании за период 2021-2022 года
+											практически не покупали кофе в упаковках 0,2 кг.</li>
+										<li>Продажи: самые большие продажи приходятся на февраль, июнь и октябрь.</li>
+										<li>Товар: существенных различий при выборе степени обработки кофе не выявлено.</li>
+
+									  </ul>
+
+
+									<h3>Рекомендации</h3>
+									<p>Основываясь на этих выводах, бизнес может реализовать следующие действенные шаги для улучшения продаж:</p>
+									<ul>
+										<li> Самые большие продажи в году выпадают на февраль, июнь и октябрь. К этим датам бизнес может подготовится, например заблаговременно закупив больше товара, а правльно продуманные акции позволят увеличить продажи и прибыль. </li>
+										<li> На протяжении исследуемого периода наблюдались обвалы продаж, связанные с сезонностью. Стоит рассмотреть возможность диверсифекации поставщиков.</li>
+										<li> Покупатели из Великобритании в 2022 году не использовали карты лояльности. Необходимо сообщить в отдел маркетинга для выяснения обстоятельств.</li>
+										<li> Покупатели из Великобритании за период 2021-2022 годов практически не покупали кофе в упаковках 0,2 кг. Отделу маркетинга необходимо разработать соответствующие акции, направленные на увеличение продаж указанного объема в стране.</li>
+
+									</ul>
+
+									<p>В заключение, эти результаты дают ценную информацию как на основе исторических
+										данных, так и на основе текущего состояния рынка. Реализуя рекомендации,
+										бизнес может улучшить продажи и лучше удовлетворять потребности и интересы своего целевого рынка.</p>
+								</div>
+							</section>
+                        
+					</div>
+
+						</div>
+					</section>
+
+				<!-- Footer -->
+				<section class="split">
+					<section>
+						<h4>Контактная инфромация</h4>
+					</section>
+				</section>
+			</div>
+									<!-- Footer -->
+									<footer id="footer">
+										<div class="inner">
+											<ul class="icons">
+												<li><a href="mailto:maslov.analytics@gmail.com" target="_blank" class="icon solid alt fa-envelope"><span class="label">Twitter</span></a></li>
+												<li><a href="https://github.com/NikitaMaslov93" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+												<li><a href="https://t.me/NikitaJehu" target="_blank" class="icon brands alt fa-telegram"><span class="label">Telegram</span></a></li>
+											</ul>
+											<ul class="copyright">
+												<li>Design: <a>Никита Маслов</a></li>
+											</ul>
+										</div>
+									</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>ETL - Data Analysis</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+
+					<header id="header" class="alt style2">
+						<a href="index.html" class="logo"><strong>Data Analyst Portfolio</strong> <span>by Nikita Maslov</span></a>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+				<nav id="menu">
+					<ul class="links">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="#footer">Contact</a></li>
+						 <div class="dropup">
+							<button class="dropbtn">Portfolio Projects</button>
+							  <div class="dropup-content">
+									<a href="python.html">Python</a>
+									<a href="sql.html">SQL</a>
+									<a href="excel.html">Excel</a>
+								    <a href="datalens.html">DataLens</a>
+									<a href="https://public.tableau.com/app/profile/nikita.maslov/vizzes" target="_blank" class="link">Tableau</a>
+									<a href="powerbi.html">Power BI</a>
+							</div>
+						 </div>
+				</nav>
+
+
+					<section id="banner" class="style2">
+						<div class="inner">
+							<span class="image">
+								<img src="images/pic07.jpg" alt="" />
+							</span>
+							<header class="major">
+								<h1>ETL-пайплайн, автоматизация отчетности и поиск аномалий</h1>
+							</header>
+							<div class="content">
+								<p> Возможность подготавливать данные пропуская их через ETL-процесс, автоматизировать
+								отчеты в виде таблиц и графиков с интересующими показателями с любой периодичностью,
+								настроить систему поиска аномалий среди метрик с автоматической отправкой в чат Телеграмм,
+								WhatsApp или VK с помощью систем оркестрации процессов.</p>
+
+							</div>
+						</div>
+					</section>
+
+				<!-- Main -->
+					<div id="main">
+
+
+							<section id="one">
+								<div class="inner">
+									<header class="major">
+										<h2>Внедрение ETL-процесса в работу аналитика</h2>
+									</header>
+									<p>Часто данные распределены по разным обновляемым таблицам в базе данных. Необходимость
+										их предобработки по отдельности и дальнейшее сведение для просмотра каких-либо
+										показателей на ежедневной основе затрачивают время. Этот рутинный процесс можно
+										и нужно автоматизировать.
+										</p>
+									<p>На примере данных из социальной сети, используя Airflow покажу как можно решить
+										эту задачу.</p>
+
+									<ul class="actions">
+									</ul>
+									<a href="https://github.com/NikitaMaslov93/PortfolioProjects/blob/main/Python/ETL-%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81%D1%81%D1%8B/Description_1.md" target="_blank" class="button next">View in GitHub</a></li>
+								</div>
+							</section>
+
+						<!-- Four -->
+						<section id="two">
+							<div class="inner">
+								<header class="major">
+									<h2>Автоматизация базовой отчетности</h2>
+								</header>
+								<p>Бизнес-заказчик - руководитель по маркетинговому направлению. Коллега хочет получать
+									аналитическую сводку в Телеграм каждый день для мониторинга показателей.
+								Отчет должен включать:
+								<li>ключевые метрики: DAU, просмотры, лайки и CTR
+								<li>текст с информацией о значениях ключевых метрик за предыдущий день
+								<li>график со значениями метрик за предыдущие 7 дней
+								<p></p>
+								<ul class="actions">
+									<li><a href="https://github.com/NikitaMaslov93/PortfolioProjects/blob/main/Python/ETL-%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81%D1%81%D1%8B/Description_2.md" target="_blank" class="button next">View in Github</a></li>
+								</ul>
+							</div>
+						</section>
+
+						<section id="three">
+								<div class="inner">
+									<header class="major">
+										<h2>Автоматизация базовой отчетности (глобальная сводка)</h2>
+									</header>
+									<p>Бизнес-заказчик - руководитель по маркетинговому направлению соц. сети. Коллега
+										хочет получать всю важную аналитическую информацию в графической форме по направлениям
+										ленты новостей и мессенджера в Телеграм на ежедневной основе.
+										<li>отчет должен помогать отвечать бизнесу на вопросы о работе всего приложения совокупно
+										<li>должны присутствовать метрики приложения как единого целого
+										</p>
+
+									<ul class="actions">
+										<li><a href="https://github.com/NikitaMaslov93/PortfolioProjects/blob/main/Python/ETL-%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81%D1%81%D1%8B/Description_3.md" target="_blank" class="button next">View in GitHub</a></li>
+									</ul>
+								</div>
+							</section>
+
+						<section id="four">
+								<div class="inner">
+									<header class="major">
+										<h2>Поиск аномалий (Система алертов)</h2>
+									</header>
+									<p>Бизнес-задача - Заказчик в лице ML-отдела выкатил новый алгоритм, рекомендующий
+										пользователям интересные посты. Заказчик хочет подстраховаться от непредвиденных
+										ситуаций и быть проинформированным, если одна из целевых метрик покажет аномальный
+										рост или падение от среднего значения.
+
+										<li>система должна с периодичностью каждые 15 минут проверять ключевые метрики,
+											такие как активные пользователи в ленте / мессенджере, просмотры, лайки, CTR,
+											количество отправленных сообщений
+										<li>Если у пользователя меньше 50 просмотров, то алгоритм не сработает
+										<li>в случае обнаружения аномального значения, в группу Телеграм должен отправиться алерт.
+										</p>
+										<p>
+
+										</p>
+
+									<ul class="actions">
+										<li><a href="https://github.com/NikitaMaslov93/PortfolioProjects/blob/main/Python/ETL-%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81%D1%81%D1%8B/Description_4.md" target="_blank" class="button next">View in GitHub</a></li>
+									</ul>
+								</div>
+							</section>
+
+					</div>
+
+				
+
+				</div>
+
+				
+				<section class="split">
+					<section>
+						<h4>Contact Information</h4>															
+					</section>
+				</section>
+			</div>
+		</section>
+
+	<footer id="footer">
+					<section class="split">
+						<section style="display: inline-block; width: 25%;">
+							<div class="contact-method">
+								<span class="icon solid alt fa-envelope"></span>
+								<h3>Email</h3>
+								<a href="mailto:maslov.analytics@gmail.com">maslov.analytics@gmail.com</a>
+							</div>
+						</section>
+						<section style="display: inline-block; width: 20%;;">
+							<div class="contact-method">
+								<span class="icon brands alt fa-telegram"></span>
+								<h3>Telegram</h3>
+								<span><a href="https://t.me/NikitaJehu">На связи</a><br /></span>
+							</div>
+						</section>
+						<section style="display: inline-block; width: 20%;">
+							<div class="contact-method">
+								<span class="icon solid alt fa-home"></span>
+								<h3>Location</h3>
+								<span>Санкт-Петербург<br /></span>
+							</div>
+						</section>
+						<section style="display: inline-block; width: 20%;">
+							<div class="contact-method">
+								<span class="icon brands alt fa-github"></span>
+								<h3>Other</h3>
+								<span><a href="https://github.com/NikitaMaslov93">GitHub</a><br /></span>
+
+								</section>
+
+							</div>
+						</section>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

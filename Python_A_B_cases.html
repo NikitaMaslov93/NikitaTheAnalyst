@@ -1,0 +1,189 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>A/B tests - Data Analysis</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+
+					<header id="header" class="alt style2">
+						<a href="index.html" class="logo"><strong>Data Analyst Portfolio</strong> <span>by Nikita Maslov</span></a>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+				<nav id="menu">
+					<ul class="links">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="#footer">Contact</a></li>
+						 <div class="dropup">
+							<button class="dropbtn">Portfolio Projects</button>
+							  <div class="dropup-content">
+									<a href="python.html">Python</a>
+									<a href="sql.html">SQL</a>
+									<a href="excel.html">Excel</a>
+								    <a href="datalens.html">DataLens</a>
+									<a href="https://public.tableau.com/app/profile/nikita.maslov/vizzes" target="_blank" class="link">Tableau</a>
+									<a href="powerbi.html">Power BI</a>
+							</div>
+						 </div>
+				</nav>
+
+
+					<section id="banner" class="style2">
+						<div class="inner">
+							<span class="image">
+								<img src="images/pic07.jpg" alt="" />
+							</span>
+							<header class="major">
+								<h1>А/Б тестирование, <br> промежуточные этапы проведения и принятие решений. </h1>
+							</header>
+							<div class="content">
+								<p> А/Б тестирование требует хорошего понимания его проведения на каждом этапе, начиная с
+									формулировки бизнес-проблемы и построении гипотезы, и заканчивая сбором и обработкой
+									результатов и принятием решения. Представленные задачи покажут уровень моей
+									компетентности в этой области.</p>
+
+							</div>
+						</div>
+					</section>
+
+				<!-- Main -->
+					<div id="main">
+
+
+							<section id="one">
+								<div class="inner">
+									<header class="major">
+										<h2>Проверка системы сплитования</h2>
+									</header>
+									<p>При проведении АА-теста важно убедиться, что система сплитования работает корректно,
+										и ключевая метрика не отличается между группами не только в конкретно нашем АА-тесте,
+										но и в целом.</p>Провести бесконечное количество АA-тестов и посмотреть, в каком
+										количестве случаев удалось отклонить нулевую гипотезу навряд ли получится.
+										Поэтому я буду многократно извлекать подвыборки из данных, проводить t-test,
+										и после смотреть, в каком проценте случаев удалось отклонить нулевую гипотезу.
+										</p>
+									<p>Как результат - будет понятно, рабочая ли система сплитования или требует доработки.</p>
+
+									<ul class="actions">
+										<li><a href="https://github.com/NikitaMaslov93/PortfolioProjects/blob/main/Python/%D0%90%5C%D0%91%20%D1%82%D0%B5%D1%81%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5/split_system_check.ipynb" target="_blank" class="button next">View in GitHub</a></li>
+									</ul>
+								</div>
+							</section>
+
+						<!-- Four -->
+						<section id="two">
+							<div class="inner">
+								<header class="major">
+									<h2>Анализ данных А/Б эксперимента</h2>
+								</header>
+								<p>Бизнес задача - компания провела эксперимент направленный на повышение CTR и
+									хочет понять стоит ли раскатывать изменение на всех клиентов.
+								<li>Необходимо выбрать метод анализа и сравнить CTR в двух группах.
+								<li>Сравнить данные с тестами и указать, почему они сработали именно так.
+								<li>Описать потенциальную ситуацию, когда может получиться такой результат.
+								<li>Подготовить выводы и бизнес-рекомендации.  </p>
+								<ul class="actions">
+									<li><a href="https://github.com/NikitaMaslov93/PortfolioProjects/blob/main/Python/%D0%90%5C%D0%91%20%D1%82%D0%B5%D1%81%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5/A_B_Analysis.ipynb" target="_blank" class="button next">View in Github</a></li>
+								</ul>
+							</div>
+						</section>
+
+						<section id="three">
+								<div class="inner">
+									<header class="major">
+										<h2>Линеаризация данных после А/Б эксперимента</h2>
+									</header>
+									<p>Бизнес-задача - компания провела два независимых эксперимента по увеличению CTR.
+										Предварительно t-тест не дал нужного значения <br> P-value ни в одном из экпериментов.
+										Редизайн эксперимента и повторный запуск проводить не планируется. Заказчик хочет знать,
+										есть ли статистически значимые отличия в экспериментах.
+										<li>Провести трансформацию данных, выбрать метод анализа и сравнить CTR в каждом из экпериментов.
+										<li>Подготовить выводы.
+										</p>
+
+									<ul class="actions">
+										<li><a href="https://github.com/NikitaMaslov93/PortfolioProjects/blob/main/Python/%D0%90%5C%D0%91%20%D1%82%D0%B5%D1%81%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5/split_system_check.ipynb" target="_blank" class="button next">View in GitHub</a></li>
+									</ul>
+								</div>
+							</section>
+
+						<section id="four">
+								<div class="inner">
+									<header class="major">
+										<h2>Симуляция Монте-Карло для определения мощности будущего А/Б теста</h2>
+									</header>
+									<p>Бизнес-задача - Заказчик в лице ML-отдела планирует выкатывать новый алгоритм,
+										рекомендующий пользователям интересные посты. После обсуждений того, как он это делает,
+										пришли к следующему пониманию:
+
+										<li>Вероятность того, что он сработает, составляет 90%
+										<li>Если у пользователя меньше 50 просмотров, то алгоритм не сработает
+										<li>На эксперимент выделена 1 неделя <br>
+										</p>
+										<p>
+										Предполагая, что увеличение числа просмотров приведёт и к увеличению лайков
+										на пользователя, возможно ли обнаружить различия в среднем количестве лайков на пользователя?
+										</p>
+
+									<ul class="actions">
+										<li><a href="https://github.com/NikitaMaslov93/PortfolioProjects/blob/main/Python/%D0%90%5C%D0%91%20%D1%82%D0%B5%D1%81%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5/MDE_1.ipynb" target="_blank" class="button next">View in GitHub</a></li>
+									</ul>
+								</div>
+							</section>
+
+					</div>
+
+				
+
+				</div>
+
+				
+				<section class="split">
+					<section>
+						<h4>Contact Information</h4>															
+					</section>
+				</section>
+			</div>
+		</section>
+
+	<!-- Footer -->
+		<footer id="footer">
+			<div class="inner">
+				<ul class="icons">
+					<li><a href="mailto:parristianna@yahoo.com" target="_blank" class="icon solid alt fa-envelope"><span class="label">Twitter</span></a></li>
+					<li><a href="https://github.com/tiannaparris" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+					<li><a href="https://www.linkedin.com/in/tianna-parris/" target="_blank" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</div>
+		</footer>
+
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
